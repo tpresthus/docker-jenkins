@@ -2,7 +2,7 @@ FROM ubuntu:13.10
 MAINTAINER Zaiste <oh [at] zaiste.net>
 
 RUN apt-get update \
-  && apt-get -q -y install wget git openjdk-7-jre-headless \
+  && apt-get -q -y install wget git openjdk-7-jre-headless openjdk-7-jdk libc6-i386 \
   && echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list \
   && wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add - \
   && apt-get update \
